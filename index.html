@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Techno Gym | Home</title>
+        <meta name="author" content="Simone Boglio, Matteo Bresich, Analiza Jully Bentivoglio" />
+        <link href="./style/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- Google Font -->
+        <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis" rel="stylesheet" type="text/css" />
+        
+        
+        <script src="./js/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/vars.js" type="text/javascript"></script>
+        
+        <!-- Gallery -->
+        <link href="./bx_slider/jquery.bxslider.css" rel="stylesheet" type="text/css" media="all" />
+        <script src="./js/jquery.bxslider.min.js" type="text/javascript"></script>
+
+        
+        <!-- DropDownMenu -->
+        <script src="./js/menu.js" type="text/javascript"></script>
+        
+        <script src="./js/get.url.js" type="text/javascript"></script>
+        <script src="./js/header.js" type="text/javascript"></script>
+        <script src="./js/footer.js" type="text/javascript"></script>
+        
+        <!-- DropDownMenu -->
+        <script type="text/javascript" src="./js/menu.js"></script>
+        
+        <script type="text/javascript">
+            getHeader(1);
+            getFooter();
+            var $ = jQuery.noConflict();
+            $(function() {
+                    $('.show_menu').click(function(){
+                            $('.menu').fadeIn();
+                            $('.show_menu').fadeOut();
+                            $('.hide_menu').fadeIn();     
+                    });
+                    $('.hide_menu').click(function(){
+                            $('.menu').fadeOut();
+                            $('.show_menu').fadeIn();
+                            $('.hide_menu').fadeOut();
+                    });
+
+                $(window).resize(function(){
+                  var w = $(window).width();
+                  if(w > 767){
+                    $('.menu').show();
+                    $('.show_menu').hide();
+                    $('.hide_menu').hide();
+                  }else{
+                    $('.menu').hide();
+                    $('.show_menu').show();
+                    $('.hide_menu').hide();
+                  }
+                });
+            });
+            $(document).ready(function(){
+              //INFO ORIENTATIVE
+              $('#tree_info').html('<h1><a href="index.html">Homepage</a></h1>');
+              $('.bxslider').bxSlider({
+                  auto: true,
+                  autoControls: true
+                });
+            });
+  
+        </script>
+
+    </head>
+
+    <body>
+        <div id="main_container">
+            <a class="show_menu" href="#">menu</a>
+            <a class="hide_menu" href="#">chiudi il menu</a>
+            
+            <!-- Header-->
+            <div id="header">
+                
+            </div>
+            
+            <!-- End of Header-->
+            
+            <div id="tree_info" class="page_header pagebg1"></div>
+            
+            
+            
+            
+            
+            <div class="content">
+                <div class="left_full">
+                <h1>Benvenuto!</h1>
+                <p>TechnoGym &egrave; lieto di darvi il benvenuto nel suo centro, dove la qualit&aacute; delle attrezzature e la dedizione dei suoi specialisti fanno di ogni visita un'esperienza memorabile.</p><p>I nostri allenatori specializzati sapranno trovare il giusto percorso per voi!</p><p>Il nostro centro fitness sar&aacute; certamente in grado offrire ci&oacute; che si vuole: prezzi competitivi, attrezzature all'avanguardia e molto altro.</p><p>Raggiungi i tuoi obiettivi e supera i tuoi ostacoli grazie ai programmi di esercizio personalizzati, che combinano la perdita di peso e di bodybuilding, a seconda delle necessit&aacute;.</p>
+                </div>
+                
+                <!-- Gallery-->
+                <div style="width: 92%; margin:2%; float:left; padding: 2%;">    
+                    <ul class="bxslider">
+                        <li>
+                            <img src="images/home_slider/slide1.jpg" alt="" title="">
+                        </li>
+                        <li>
+                            <img src="images/home_slider/slide2.jpg" alt="" title="">
+                        </li>
+                        <li>
+                            <img src="images/home_slider/slide3.jpg" alt="" title="">
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="clear"></div>
+                
+            </div>
+            
+            
+            <div class="footer">
+            
+            </div>
+            
+        </div>
+    </body>
+    
+  
+</html>

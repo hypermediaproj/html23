@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Techno Gym | Stanze</title>
+        <meta name="author" content="Simone Boglio, Matteo Bresich, Analiza Jully Bentivoglio" />
+        <link rel="stylesheet" type="text/css" media="all" href="./style/style.css" />
+        <!-- Google Font -->
+        <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis" rel="stylesheet" type="text/css" />
+        
+        <script src="./js/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/vars.js" type="text/javascript"></script>
+        <script src="./js/header.js" type="text/javascript"></script>
+        <script src="./js/get.url.js" type="text/javascript"></script>
+        <script src="./js/lista_stanze.js" type="text/javascript"></script>
+        <script src="./js/footer.js" type="text/javascript"></script>
+        
+        <!-- DropDownMenu -->
+        <script type="text/javascript" src="./js/menu.js"></script>
+        
+        <script type="text/javascript">
+            getHeader(6);
+            getContent();
+            getFooter();
+            $(function() {
+                    $('.show_menu').click(function(){
+                            $('.menu').fadeIn();
+                            $('.show_menu').fadeOut();
+                            $('.hide_menu').fadeIn();     
+                    });
+                    $('.hide_menu').click(function(){
+                            $('.menu').fadeOut();
+                            $('.show_menu').fadeIn();
+                            $('.hide_menu').fadeOut();
+                    });
+
+                $(window).resize(function(){
+                  var w = $(window).width();
+                  if(w > 767){
+                    $('.menu').show();
+                    $('.show_menu').hide();
+                    $('.hide_menu').hide();
+                  }else{
+                    $('.menu').hide();
+                    $('.show_menu').show();
+                    $('.hide_menu').hide();
+                  }
+                });
+            });
+  
+        </script>
+
+    </head>
+
+    <body>
+        <div id="main_container">
+            <a class="show_menu" href="#">menu</a>
+            <a class="hide_menu" href="#">chiudi il menu</a>
+            
+            <!-- Header-->
+            <div id="header">
+            </div>
+            
+            <!-- End of Header-->
+            
+            <div id="tree_info" class="page_header pagebg1">
+                  
+            </div>
+            
+            <!-- Content of the page-->
+            
+            <div class="content">
+                <div class="left_full"><h2>Il nostro centro in tutti i suoi spazi</h2><h3>Un sacco di posti</h3><p>Nel nostro centro trovano spazio sia le attivit&agrave; indoor che outdoor grazie ad una struttura polivalente che, in base alla stagione, offre diverse modalit&agrave; di fruizione.</p></div><div class="left_full"><h3>Le nostre sale</h3><p>In ogni sala attivit&agrave; &egrave; sempre presente il nostro staff a disposizione per supporto e assistenza e per guidarvi nello svolgimento degli esercizi.</p><p>Noi di TechnoGym vogliamo solo il meglio per i nostri clienti e per dimostrarvelo ecco le aree del nostro centro:</p></div>
+                
+                <div class="inner_content">
+                <!-- Javascript will print data in here when we have finished the page -->
+                </div>
+                
+                
+                <div class="clear"></div>
+            </div>
+            
+            
+            <div class="footer">
+            
+            </div>
+            
+        </div>
+    </body>
+    
+  
+</html>

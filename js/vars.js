@@ -1,0 +1,4 @@
+var SERVER_URL = "http://178.62.91.75/";
+var PHP_FOLDER = "php/";
+var PHP_AJAX_URL = SERVER_URL + PHP_FOLDER;
+var HTML_AJAX_URL = SERVER_URL;
